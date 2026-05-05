@@ -34,9 +34,11 @@ leetcode
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1021-remove-outermost-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1021-remove-outermost-parentheses/) | Easy |
+| [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 | [3856-trim-trailing-vowels](https://github.com/tishyajena/_dsa_/tree/main/3856-trim-trailing-vowels/) | Easy |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1021-remove-outermost-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1021-remove-outermost-parentheses/) | Easy |
+| [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
 <!---LeetCode Topics End-->
