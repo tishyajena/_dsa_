@@ -30,4 +30,12 @@ leetcode
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0189-rotate-array](https://github.com/tishyajena/_dsa_/tree/main/0189-rotate-array/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1021-remove-outermost-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1021-remove-outermost-parentheses/) | Easy |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1021-remove-outermost-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1021-remove-outermost-parentheses/) | Easy |
 <!---LeetCode Topics End-->
