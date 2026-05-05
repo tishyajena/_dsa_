@@ -34,6 +34,7 @@ leetcode
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1021-remove-outermost-parentheses](https://github.com/tishyajena/_dsa_/tree/main/1021-remove-outermost-parentheses/) | Easy |
+| [3856-trim-trailing-vowels](https://github.com/tishyajena/_dsa_/tree/main/3856-trim-trailing-vowels/) | Easy |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
