@@ -4,6 +4,7 @@ class Solution {
         int currProd = 1;
         int maxProd = Integer.MIN_VALUE;
 
+        //check forward once
         for(int i = 0; i<n; i++){
             currProd*=nums[i];
             maxProd = Math.max(currProd, maxProd);
@@ -12,6 +13,7 @@ class Solution {
             }
         }
 
+        //check backward once
         currProd = 1;
         for(int i = n-1; i>=0; i--){
             currProd*=nums[i];
