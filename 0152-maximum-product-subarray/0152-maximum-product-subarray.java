@@ -1,25 +1,24 @@
 class Solution {
     public int maxProduct(int[] nums) {
-        int n = nums.length;
-        int currProd = 1;
+        int n= nums.length;
+        if(n== 1) return nums[0];
         int maxProd = Integer.MIN_VALUE;
-
-        //check forward once
+        int prod = 1;
         for(int i = 0; i<n; i++){
-            currProd*=nums[i];
-            maxProd = Math.max(currProd, maxProd);
-            if(currProd == 0){
-                currProd = 1;
+            prod *= nums[i];
+            maxProd = Math.max(prod, maxProd);
+
+            if(prod==0){
+                prod = 1;
             }
         }
-
-        //check backward once
-        currProd = 1;
+        prod = 1;
         for(int i = n-1; i>=0; i--){
-            currProd*=nums[i];
-            maxProd = Math.max(currProd, maxProd);
-            if(currProd == 0){
-                currProd = 1;
+            prod *= nums[i];
+            maxProd = Math.max(prod, maxProd);
+
+            if(prod==0){
+                prod = 1;
             }
         }
         return maxProd;
