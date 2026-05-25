@@ -2,29 +2,20 @@ class Solution {
     public int findComplement(int num) {
         if(num == 1 || num == 0) return 0;
         StringBuilder sb = new StringBuilder();
-        while(num>0){
-            int temp = num%2;
-            sb.append(String.valueOf(temp));
-            System.out.println(sb);
-            num = num/2;
-        }
+        String s1 = Integer.toBinaryString(num);
         
-        for(int i = 0; i<sb.length(); i++){
-            if(sb.charAt(i) == '1'){
-                sb.setCharAt(i, '0');
+        for(int i = 0; i<s1.length(); i++){
+            if(s1.charAt(i) == '1'){
+                sb.append('0');
             }
             else{
-                sb.setCharAt(i, '1');
+                sb.append('1');
             }
         }
         
-        double res = 0;
-        for(int i = 0; i<sb.length(); i++){
-            int x = sb.charAt(i) - '0';
-            res  = res + x * Math.pow(2, i);
-        }
+        int res = Integer.parseInt(sb.toString(),2);
 
-        return (int)res;
+        return res;
 
     }
 }
