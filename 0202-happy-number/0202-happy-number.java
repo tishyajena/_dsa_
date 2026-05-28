@@ -1,6 +1,5 @@
 class Solution {
     public boolean isHappy(int n) {
-        if (n == 1) return true;
         Set<Integer> seen = new HashSet<>();
         while(n!=1 && !seen.contains(n)){
             seen.add(n);
