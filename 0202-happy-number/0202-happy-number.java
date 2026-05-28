@@ -1,18 +1,12 @@
 class Solution {
     public boolean isHappy(int n) {
         if (n == 1) return true;
-        List<Integer> generated = new ArrayList<>();
-
-        generated.add(n);
-        
-        while(true){
+        Set<Integer> seen = new HashSet<>();
+        while(n!=1 && !seen.contains(n)){
+            seen.add(n);
             n = sumOfDigits(n);
-            if(n == 1) return true;
-            for(int num: generated){
-                if(num == n) return false;
-            }
-            generated.add(n);
-        } 
+        }
+        return n==1;
     }
     private int sumOfDigits(int num){
         int sum = 0;
