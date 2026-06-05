@@ -7,7 +7,14 @@ class Solution {
                 sb.append(x);
             }
         }
-        StringBuilder sb2 = new StringBuilder(sb);
-        return sb2.reverse().toString().equals(sb.toString());
+        int i = 0;
+        int j = sb.length()-1;
+        while(i<j){
+            if(sb.charAt(i) != sb.charAt(j)){
+                return false;
+            }
+            i++; j--;
+        }
+        return true;
     }
 }
