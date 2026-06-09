@@ -16,18 +16,18 @@
 class Solution {
     public TreeNode preOrder(TreeNode root){
         if(root == null) return root;
-        TreeNode p = root;
-        p = root.left;
+        TreeNode temp = root;
+        temp = root.left;
         root.left = root.right;
-        root.right = p;
+        root.right = temp;
 
         preOrder(root.left);
         preOrder(root.right);
-
+        
         return root;
     }
     public TreeNode invertTree(TreeNode root) {
-        return preOrder(root);
+       return preOrder(root);
 
     }
 }
