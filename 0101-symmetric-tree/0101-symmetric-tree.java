@@ -15,32 +15,23 @@
  */
 class Solution {
     public boolean isSymmetric(TreeNode root) {
-        //----BFS----
-        // Queue<TreeNode> q = new LinkedList<>();
-        // q.add(root.left); q.add(root.right);
+        //----BFS-----
 
-        // while(!q.isEmpty()){
-        //     TreeNode l = q.poll();
-        //     TreeNode r = q.poll();
+        Queue<TreeNode> q = new LinkedList<>();
+        if(root.left == null && root.right == null) return true;
+        if(root.left == null || root.right == null) return false;;
+        q.offer(root.left);
+        q.offer(root.right);
+        while(!q.isEmpty()){
+            TreeNode left = q.poll();
+            TreeNode right = q.poll();
 
-        //     if(l == null && r == null) continue;
-        //     if(l == null || r == null || l.val != r.val) return false;
+            if(left == null && right == null) continue;
+            if(left == null || right == null || left.val != right.val) return false;
 
-        //     q.add(l.left); q.add(r.right);
-        //     q.add(l.right); q.add(r.left);
-        
-        // }
-        // return true;
-        
-        //---DFS----
-
-        return isMirror(root.left, root.right);
-        
-    }
-    private boolean isMirror(TreeNode left, TreeNode right){
-        if(left == null && right == null) return true;
-        if(left == null || right == null) return false;
-
-        return (left.val == right.val && isMirror(left.left, right.right) && isMirror(left.right, right.left)); 
+            q.offer(left.left); q.offer(right.right);
+            q.offer(left.right); q.offer(right.left);
+        }
+        return true;
     }
 }
