@@ -18,8 +18,6 @@ class Solution {
         //----BFS-----
 
         Queue<TreeNode> q = new LinkedList<>();
-        if(root.left == null && root.right == null) return true;
-        if(root.left == null || root.right == null) return false;;
         q.offer(root.left);
         q.offer(root.right);
         while(!q.isEmpty()){
