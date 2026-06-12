@@ -46,10 +46,10 @@ class Solution {
 
         img[sr][sc] = color;
 
-        dfs(img, sr+1, sc, oc, color);
-        dfs(img, sr-1, sc, oc, color);
-        dfs(img, sr, sc+1, oc, color);
-        dfs(img, sr, sc-1, oc, color);
+        dfs(img, sr+1, sc, oc, color); //bottom
+        dfs(img, sr-1, sc, oc, color); //top
+        dfs(img, sr, sc+1, oc, color); //right
+        dfs(img, sr, sc-1, oc, color); //left
     }
 
 }
