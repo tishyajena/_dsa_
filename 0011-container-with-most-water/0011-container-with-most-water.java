@@ -4,9 +4,9 @@ class Solution {
         int i = 0;
         int j = n-1;
         int res = 0;
-
+        int water;
         while(i<j){
-            int water;
+            
             if(height[i]<height[j]){
                 water = height[i]*(j-i);
                 i++;
