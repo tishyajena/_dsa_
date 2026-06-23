@@ -1,19 +1,21 @@
 class Solution {
     public int maxArea(int[] height) {
-        int res = 0;
+        int n = height.length;
         int i = 0;
-        int j = height.length-1;
+        int j = n-1;
+        int res = 0;
+
         while(i<j){
-            if(height[i]>=height[j]){
-                int len = j-i;
-                res = Math.max(len*height[j], res);
-                j--;
-            }
-            else{
-                int len = j-i;
-                res = Math.max(len*height[i], res);
+            int water;
+            if(height[i]<height[j]){
+                water = height[i]*(j-i);
                 i++;
             }
+            else{
+                water = height[j]*(j-i);
+                j--;
+            }
+            res = Math.max(water, res);
 
         }
         return res;
