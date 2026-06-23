@@ -1,26 +1,26 @@
 class Solution {
     public void sortColors(int[] nums) {
         int n = nums.length;
-        int low = 0;
+        int start = 0;
         int mid = 0;
-        int high= n-1;
+        int end = n-1;
 
-        while(mid<=high){
+        while(mid<=end){
             if(nums[mid] == 0){
-                int temp = nums[low];
-                nums[low] = nums[mid];
-                nums[mid] = temp;
-                low++;
+                int temp = nums[mid];
+                nums[mid] = nums[start];
+                nums[start] = temp;
                 mid++;
+                start++;
             }
             else if(nums[mid] == 1){
                 mid++;
             }
             else{
-                int temp = nums[high];
-                nums[high] = nums[mid];
-                nums[mid] = temp;
-                high--;
+                int temp = nums[mid];
+                nums[mid] = nums[end];
+                nums[end] = temp;
+                end--;
             }
         }
         
