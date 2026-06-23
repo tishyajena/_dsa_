@@ -1,18 +1,19 @@
 class Solution {
-
-    //KADANE'S ALGOOOO
     public int maxSubArray(int[] nums) {
         int n = nums.length;
-        int maxSum = Integer.MIN_VALUE;
+        int maxSub = Integer.MIN_VALUE;
+        // if(n == 1){
+        //     maxSub = nums[0];
+        //     return maxSub;
+        // }
         int sum = 0;
         for(int i = 0; i<n; i++){
             sum+=nums[i];
-            
-            maxSum = Math.max(sum, maxSum);
+            maxSub = Math.max(sum, maxSub);
             if(sum<0){
                 sum = 0;
             }
         }
-        return maxSum;
+        return maxSub;
     }
 }
