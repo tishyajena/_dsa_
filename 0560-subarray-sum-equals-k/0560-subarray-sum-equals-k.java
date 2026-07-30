@@ -1,30 +1,37 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        // -----------BRUTE FORCE--------------
-        // int count = 0;
-        // for(int i = 0; i<nums.length; i++){
-        //     for(int j = i; j<nums.length;j++){
-        //         int sum = 0;
-        //         for(int z = i; z<=j; z++){
-        //             sum+=nums[z];
-                    
-        //         }
-        //         if(sum == k) count++;
-        //     }
-        // }
-        // return count;
-
-        // -----------OPTIMAL APPROACH--------------
-        int count = 0;
-        HashMap<Integer,Integer> map = new HashMap<>(); // {sum, freq of sum}
-        int sum = 0;
     
-        for(int i = 0; i<nums.length; i++){
-            sum += nums[i];
-            if(sum == k) count++;
-            if(map.containsKey(sum-k)) count+=map.get(sum-k);
-            map.put(sum, map.getOrDefault(sum,0)+1);
+    //----Brute force----
+    //     int n = nums.length;
+    //     int count = 0;
+    //     for(int i = 0; i<n; i++){
+    //         int sum = 0;
+    //         for(int j = i; j<n; j++){
+    //             sum+=nums[j];
+    //         }
+    //         if(sum == k) count++;
+
+    //     }
+    //     return count;
+
+    //----Optimal force----
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0,1);
+        int total = 0;
+        int count = 0;
+
+        for(int x: nums){
+            total += x;
+
+            if(map.containsKey(total-k)){
+                count+= map.get(total-k);
+            }
+
+            map.put(total, map.getOrDefault(total, 0) +1);
         }
+
         return count;
+
     }
+
 }
