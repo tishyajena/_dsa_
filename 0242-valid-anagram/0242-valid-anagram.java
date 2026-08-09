@@ -8,7 +8,7 @@ class Solution {
        for(char x: t.toCharArray()){
         freq[x-'a']--;
        }
-       for(int i = 0; i<26; i++){
+       for(int i = 0; i<25; i++){
         if(freq[i] != 0){
             return false;
         }
