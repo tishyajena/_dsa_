@@ -1,23 +1,15 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
        if(s.length() != t.length()) return false;
-       int []freqS = new int[26];
-       int []freqT = new int[26];
+       int []freq = new int[26];
        for(char x : s.toCharArray()){
-        freqS[x-'a']++;
+        freq[x-'a']++;
        }
        for(char x: t.toCharArray()){
-        freqT[x-'a']++;
-       }
-       for(int x: freqS){
-        System.out.print(x + " ");
-       }
-
-       for(int x: freqT){
-        System.out.print(x + " ");
+        freq[x-'a']--;
        }
        for(int i = 0; i<26; i++){
-        if(freqS[i] != freqT[i]){
+        if(freq[i] != 0){
             return false;
         }
        }
