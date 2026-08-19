@@ -19,20 +19,5 @@ class Solution {
         }
         return res.toString();
 
-        // int k = 0;
-        // StringBuilder sb = new StringBuilder();
-        // String str = strs[0];
-
-        // for(int i = 1; i<strs.length; i++){
-        //     if(str.charAt(k) != strs[i].charAt(k)){
-        //         return sb.toString();
-        //     }
-        //     else{
-        //         sb.append(str.charAt(k));
-        //         k++;
-        //     }
-        // }
-        // return sb.toString();
-
     }
 }
